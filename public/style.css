@@ -1,0 +1,151 @@
+.body-con {
+    background-image: url(texture-bg-mobile.jpg);
+    background-repeat: repeat;
+    height: 250vh;
+}
+i{
+    color: #70a401;
+}
+ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.footer {
+    background: black;
+    height: 90px;
+}
+.btn-link:focus{
+    border: 0;
+}
+.accordion button {
+    color: #4d4d4d;
+    font-size: 1.4285714286rem;
+    width: 100%;
+}
+
+.accordion button p {
+    text-align: left;
+}
+
+.nav {
+    background: black;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    color: white;
+}
+.nav p{
+    margin-top: 6px;
+}
+.nav img {
+    height: 100%;
+
+}
+
+.card,
+.top,
+.nav-menu,
+.confirm-con,
+.confirm-userInfo,
+.confirm-order, .quantity, .userInfo {
+    background: white;
+}
+.quantity, .userInfo {
+    padding: 10px;
+    margin-top: 10px;
+}
+.sumbit-con{
+    text-align: right;
+}
+.top,
+.nav-menu,
+.confirm-com,
+.confirm-title {
+    margin: 15px 15px !important;
+    /* margin-top: 20px; */
+}
+
+.subtitle {
+    color: rgb(179, 179, 179);
+}
+
+.nav-menu div {
+    height: 50px;
+    font-weight: 600;
+    padding: 15px 1% 0 2%;
+    background: rgb(223, 223, 223);
+    border-bottom: 4px solid #E13340;
+    margin-bottom: 0 !important;
+}
+
+.sumbit {
+    background-color: #E13340;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    border: 0;
+    margin-top: 10px;
+}
+.sumbit:hover {
+    background-color: rgb(255, 72, 84);
+}
+
+.pizzaImg-con {
+    text-align: right;
+}
+
+.error-con {
+    margin: 0 15px;
+}
+
+.error {
+    border-left: 4px solid rgb(255, 49, 83);
+    background: rgb(255, 237, 239);
+    padding: 10px;
+}
+
+/* confirmation page */
+.confirm-userInfo{
+    padding: 15px;
+}
+.confirm-userInfo p{
+    padding-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.flex {
+    display: flex;
+    
+}
+.confirm-order{
+    padding: 15px;
+}
+
+.flex ul {
+    margin-top: 10px;
+}
+
+.cancel-btn{
+    background: #70a401;
+    border-radius: 3px;
+    padding: 10px 20px;
+    color: white;
+}
+.cancel-btn:hover{
+    background: #8bcc00;
+    border-radius: 3px;
+    padding: 10px 20px;
+    color: white;
+}
+.confirm-btn{
+    background: #E13340;
+    border-radius: 3px;
+    padding: 10px 20px;
+    color: white;
+}
+span{
+    font-size: 16px;
+}

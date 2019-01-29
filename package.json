@@ -1,0 +1,18 @@
+{
+  "name": "week3",
+  "version": "1.0.0",
+  "description": "The order page displays the information about the  * size of the pizza, * type of crust and  * available toppings.  Use appropriate HTML controls like radio buttons and check box lists to display the information. The form also captures  * quantity,  * phone number and  * address information of the customer. When the submit button is clicked on this page it posts the data to the order confirmation page. The data for the size, crust type, cost details and available toppings should not be hardcoded but instead read from a JSON data file that you provide in the web site. Perform any data validation required – entering invalid data should not crash the server. Explore NPMJS for a validation module and make use of it rather than hand coding the validation. (take 3hours)",
+  "main": "JSON.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "express-validator": "^5.3.1"
+  }
+}

@@ -1,0 +1,154 @@
+<%- include('header') -%>
+
+<div class="container ">
+    <div class="error-con">
+        <% if (error) {
+            error.forEach(errorText=>{ %>
+        <p class="error">
+            <%= errorText.msg %>
+        </p>
+        <% })} %>
+    </div>
+    <div class="row top">
+        <div class="col-xs-12 col-sm-6">
+            <h1>
+                <%= title %>
+            </h1>
+            <p class="subtitle">
+                <%= subtitle %>
+            </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 pizzaImg-con"><img src="../public/pizza.png" alt="pizza"></div>
+    </div>
+    <form action="/confirmation" method="POST">
+        <div class="col-xs-12 col-sm-6">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="true" aria-controls="collapseOne">
+
+                                <p class="col-xs-10">Size</p>
+                                <i class="fas fa-angle-right col-xs-2"></i>
+
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <ul class="card-body">
+                            <% Object.keys(pizzaFile.size).forEach((keyName)=>{ %>
+                            <li>
+                                <input type="radio" name="size" value="<%= keyName %>">
+                                <%= keyName %>
+                            </li>
+                            <% })%>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                <p class="col-xs-10">Crust</p>
+                                <i class="fas fa-angle-right col-xs-2"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <ul class="card-body">
+                            <% Object.keys(pizzaFile.crust).forEach(keyName=>{ %>
+                            <li><input type="radio" name="crust" value="<%= keyName %>">
+                                <%= keyName %>
+                            </li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                <p class="col-xs-10">Sauce</p>
+                                <i class="fas fa-angle-right col-xs-2"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <ul class="card-body">
+                            <% Object.keys(pizzaFile.sauce).forEach(keyName=>{ %>
+                            <li><input type="radio" name="sauce" value="<%= keyName %>">
+                                <%= keyName %>
+                            </li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+                                aria-expanded="false" aria-controls="collapseFour">
+                                <p class="col-xs-10">Cheese</p>
+                                <i class="fas fa-angle-right col-xs-2"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                        <ul class="card-body">
+                            <% Object.keys(pizzaFile.topping.cheese).forEach(keyName=>{ %>
+                            <li><input type="radio" name="cheese" value="<%= keyName %>">
+                                <%= keyName%>
+                            </li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingFive">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                <p class="col-xs-10">Toppings</p>
+                                <i class="fas fa-angle-right col-xs-2"></i>
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                        <ul class="card-body">
+                            <% Object.keys(pizzaFile.topping.meat).forEach(keyName=>{ %>
+                            <li><input type="checkbox" name="meat" value="<%= keyName %>">
+                                <%= keyName %>
+                            </li>
+                            <% }) %>
+                            <% Object.keys(pizzaFile.topping.vegie).forEach(keyName=>{ %>
+                            <li><input type="checkbox" name="vegie" value="<%= keyName %>">
+                                <%= keyName %>: 
+                            </li>
+                            <% }) %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+            <div class="flex quantity">
+                <h4>Quantity: </h4>
+                <input type='text' name='quantity' placeholder="Quantity" />
+            </div>
+            <div class="userInfo">
+                <h4>Customer Information: </h4>
+                Phone: <input type='text' name='phone' placeholder="Enter a phone number" />
+                <br>
+                Address: <input type='text' name='address' placeholder="Enter address" />
+            </div>
+            <div class="sumbit-con"><input type="submit" name="submit" id="submit" value="Submit" class="sumbit"></div>
+        </div>
+    </form>
+</div>
+
+<%- include('footer') -%>

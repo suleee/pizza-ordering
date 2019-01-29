@@ -1,0 +1,80 @@
+<!-- detail of the order along with the total cost and Time -->
+<!-- user Info -->
+<!-- Pizza info & Total Cost -->
+<!-- Delivery Time  -->
+
+<!-- buttons= cancel the order  and confirm the order-->
+<!-- Cancelling the order simply returns to the previous page -->
+<!-- Confirming the order displays an order confirmation message -->
+
+<%- include('header') -%>
+<div class="container">
+    <h1 class="confirm-title">
+        <%= title %>
+    </h1>
+    <div clas="row confirm-con">
+        <div class="col-xs-12 col-sm-6">
+            <div class="confirm-order">
+                <div class="flex">
+                    <h4> Quantity: </h4>
+                    <ul>
+                        <li><%= quantity %></li>
+                    </ul>
+                </div>
+                <div class="flex">
+                    <h4>Size:</h4>
+                    <ul>
+                        <li>
+                            <%= sizeType %>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex">
+                    <h4>Crust:</h4>
+                    <ul>
+                        <li>
+                            <%= crustType %>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex">
+                    <h4>Sauce:</h4>
+                    <ul>
+                        <li>
+                            <%= sauceType %>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex">
+                    <h4>Cheese:</h4>
+                    <ul>
+                        <li>
+                            <%= cheeseType %>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex">
+                    <h4>Toppings (option):</h4>
+                    <ul>
+                        <li>
+                            <%= meatType %>
+                        </li>
+                        <li>
+                            <%= vegieType %>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6">
+            <div class="confirm-userInfo flex">
+                <h5>Approximate time of delivery:</h5><p> 45 mins</p>
+            </div>
+            <h3>Total: $ <span>+tax</span></h3>
+            <a href="/" class="cancel-btn">cancel the order</a>
+            <a href="" class="confirm-btn">confirm the order</a>
+        </div>
+    </div>
+</div>
+<%- include('footer') -%>

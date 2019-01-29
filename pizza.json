@@ -1,0 +1,46 @@
+{
+    "size": {
+        "large": 20,
+        "medium": 10,
+        "small": 5
+    },
+    "type": {
+        "square": 0,
+        "circle": 0
+    },
+    "topping": {
+        "meat": {
+            "pepporoni": 2,
+            "ham": 2,
+            "beef": 2,
+            "chicken": 2
+        },
+        "vegie": {
+            "pineapple": 1,
+            "mushroom": 1,
+            "pepper": 1,
+            "onion": 1
+            
+        },
+        "cheese":{
+            "chedder": 1,
+            "mozza": 2,
+            "three": 3
+        }
+    },
+    "sauce": {
+        "cream": 2,
+        "tomato": 1,
+        "BBQ": 1,
+        "ranch": 1,
+        "rojae": 2,
+        "hot sauce": 1
+    },
+    "crust": {
+        "pan":0,
+        "thin": 1,
+        "thick": 1,
+        "cheese crust": 3
+    }
+
+}
